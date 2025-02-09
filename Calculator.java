@@ -7,7 +7,7 @@ public class Calculator {
         System.out.print("Enter first number: ");
         double num1 = scanner.nextDouble();
 
-        System.out.print("Enter an operator (+, -, *, /): ");
+        System.out.print("Enter an operator (+, -, *, /, %, ^): ");
         char operator = scanner.next().charAt(0);
 
         System.out.print("Enter second number: ");
@@ -32,6 +32,12 @@ public class Calculator {
                     System.out.println("Error! Division by zero is not allowed.");
                     return;
                 }
+                break;
+            case '%':
+                result = num1 % num2;
+                break;
+            case '^':
+                result = Math.pow(num1, num2);
                 break;
             default:
                 System.out.println("Invalid operator!");
